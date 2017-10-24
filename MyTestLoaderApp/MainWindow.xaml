@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyTestLoaderApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MyTestLoaderApp" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="71*"/>
+            <RowDefinition Height="92*"/>
+        </Grid.RowDefinitions>
+        <Slider x:Name="slider" HorizontalAlignment="Left" Margin="10,59.433,0,0" VerticalAlignment="Top" Height="33" Width="499" ValueChanged="slider_ValueChanged" Maximum="100" Grid.Row="1"/>
+        <ProgressBar x:Name="bar" HorizontalAlignment="Left" Height="15" Margin="10,29.433,0,0" VerticalAlignment="Top" Width="489" Grid.Row="1"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="205,52,0,0" TextWrapping="Wrap" Text="0.00%" VerticalAlignment="Top" Width="147" Height="33" FontFamily="Microsoft YaHei" FontSize="22" FontWeight="Bold" Grid.RowSpan="2"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="206,15,0,0" TextWrapping="Wrap" Text="0.00%" VerticalAlignment="Top" Width="232" Height="47" FontFamily="Microsoft YaHei" FontSize="44" FontWeight="Bold" TextDecorations="{x:Null}" Opacity="0.15"/>
     </Grid>
 </Window>
